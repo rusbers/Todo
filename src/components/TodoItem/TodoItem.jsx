@@ -17,7 +17,6 @@ function TodoItem({ todo, deleteTodo, completeTodo, editTodo }) {
   };
 
   const handleTodoTextChange = (e) => {
-    console.log(text);
     setText(e.target.value);
   };
 
@@ -49,11 +48,10 @@ function TodoItem({ todo, deleteTodo, completeTodo, editTodo }) {
         <TodoText
           isEditingMode={isEditingMode}
           id={id}
-          todoText={text}
+          text={text}
           completed={completed}
           completeTodo={completeTodo}
           handleTodoTextChange={handleTodoTextChange}
-          text={text}
         />
       </ListItemButton>
     </ListItem>
